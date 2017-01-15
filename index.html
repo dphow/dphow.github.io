@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0" />
+<meta name="author" content="Daniel Patrick Howard">
+<meta charset="UTF-8">
+<meta description="Personal website for Daniel Patrick Howard">
+<title>Daniel Patrick Howard</title>
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+<script src="https://apis.google.com/js/api.js"></script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</head>
+<!--Huge thanks to Kevisn Hsiung of Microsoft who inspired this site's design (kevinhsiung.com)-->
+
+<body>
+<div id="drawCover"></div>
+<div class="container">
+    <div id="offscreen">
+        <canvas id="analyzeBuffer"></canvas>
+    </div>
+    <div id="SE">Hi, my name is Daniel Howard. If you know me well, then you may also call me DHow. I am a Ph.D. candidate at the University of Notre Dame
+	in the Department of Applied & Computational Mathematics & Statistics.</div>
+	<div id="trackerGlobe"><script type="text/javascript" src="//ra.revolvermaps.com/0/0/5.js?i=0pi3kvzsbyy&amp;m=0&amp;s=90&amp;c=ff0000&amp;cr1=ffffff" async="async"></script></div>
+	
+	<section name="GUI">
+	<div class="dash back"><div id="dashText">
+                <ul><a href="javascript:toggleAbout()">About</a></ul>
+                <ul><a href="javascript:toggleInfo()">Contact</a></ul>
+				<ul><a href="javascript:toggleProjects()">Projects</a></ul>
+				<ul><a href="javascript:openResearch()">Research</a></ul>
+				<ul><a href="javascript:openMap()">Map</a></ul>
+				<ul><a href="javascript:openSchedule()">Schedule</a></ul>
+				<ul><a href="javascript:openResume()">Resume</a></ul>
+				<ul><a href="javascript:openCV()">CV</a></ul>
+				<ul><a href="javascript:openFun()">Fun</a></ul>
+				<ul><a href="//blog">Blog</a></ul>
+            </div></div>
+    <div id="menu_container" class="first">
+        <div id="contactMenu">
+			<div id="GPG">
+			<a href="DanielHoward.gpg" target="_blank">GPG<br>key</a>
+			</div>
+            <div class="menu_item menu_open" id="email">
+                <div id="email_inlay"></div>
+                <div id="email_text">
+                    <p>IM-Video-email: <a href="" data-u="dhoward3" data-d="nd.edu" target="_blank"></a></p>
+                </div>
+            </div>
+            <div class="menu_item menu_closed" id="linkedin">
+                <div class="clickable"><a href="http://www.linkedin.com/in/dphoward" title="Linkedin Profile" target="_blank"><div class="link_div"></div></a></div>
+            </div>
+            <div class="menu_item menu_closed" id="fb">
+                <div class="clickable"><a href="http://facebook.com/FinalDanish" title="Profile Page" target="_blank"><div class="link_div"></div></a></div>
+            </div>
+        </div>
+    </div>
+
+	<div id="randomQuote">
+		<span id="quote">Retrieving random quote...</span><br>
+		<a class="newRandom" href="javascript:newQuote()">New random quote</a>
+	</div>
+    <div id="apis" class="back info_item"><div id="apisImage"></div></div>
+    <div id="redditbox"class="back info_item">
+		<div id="redditboxContent"></div>
+		<div class="newRandom">New random
+			<a href="javascript:fillBackground(false)"> still image </a> &nbsp; 
+			<a href="javascript:fillBackground(true)"> GIF </a>
+		</div>
+	</div>
+    <div id="status"class="back info_item"><div id="clock"></div><div id="date_time"></div></div>
+    <div id="apisInfo" class="back">
+        <p>
+            <a href="http://forismatic.com/en/api/" target="_blank">Forismatic API</a><br/>
+            <a href="http://numbersapi.com/" target="_blank">Numbers API</a><br/>
+			<a href="https://www.reddit.com/dev/api/" target="_blank">Reddit API</a>
+        </p>
+    </div>
+    <div id="projects" class="back">
+        <div id="projectsTitle">Projects I've worked on...</div>
+        <div id="exitProjectsPane" onclick="javascript:toggleProjects()">&times;</div>
+        <div id="projectsGallery">
+            <div id="leftProj" class="projArrow"></div>
+            <div id="rightProj" class="projArrow"></div>
+            <div id="projectsGalleryInner">
+                <ul>
+                    <li><a href="CSE60166_EarthTempDemo/" target="_blank">
+					<div class="projectsElement" style="background-image:url('projImages/EarthTemp.jpeg')"></div>
+					<div class="projectsDesc">WebGL and THREE.js Earth Temperture History</div>
+					</a>
+					</li>
+					<li><a href="https://www.academia.edu/10143625/Applying_the_Eigendecomposition_Pseudospectral_Method_to_Wave_Propagation_Problems" target="_blank">
+					<div class="projectsElement" style="background-image:url('projImages/EPS.png')"></div>
+					<div class="projectsDesc">Eigendecomposition Pseudospectral Method</div>
+					</a>
+					</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="infobox"class="back"><div id="infoboxInlay"class="mid"><p></p></div></div>
+	</section>
+	
+	<section name="name">
+        <div class="first">
+			<div class="about mid">
+            <div id="aboutOuterWrapper">
+				<div itemscope itemtype="http://schema.org/Person" id="aboutText">
+                    <div id="aboutInnerWrapper" class="back">
+                        My name is <span itemprop="givenName">Daniel</span> <span itemprop="familyNmae">Howard</span>.
+						Friends also call me <span itemprop="additionalName">DHow</span> ("Dee-How"). <br><br>
+						I am a <span itemprop="jobTitle">graduate student</span> Ph.D. candidate 
+						at the <a href="https://www.nd.edu/" target="_blank"><span itemprop="affiliation">University of Notre Dame</span></a>
+						in the <a href="https://acms.nd.edu/" target="_blank"><span itemprop="memberOf">Department of Applied & Computational Mathematics & Statistics</span></a>.
+						In 2015, I graduated from the <a href="http://www.wisc.edu/" target="_blank"><span itemprop="alumniOf">University of Wisconsin-Madison</span></a>
+						with a B.S. degree in <a href="https://www.math.wisc.edu/amep" target="_blank">Applied Mathematics, Engineering, & Physics</a>. <br><br>
+						My current research work focuses on computational fluid dynamics and numerical modeling of Indian monsoons utilizing High Performance Computing machinery.
+						This work is under my advisor Prof. <a href="https://ceees.nd.edu/profiles/hfernando" target="_blank"><span itemprop="colleague">Harindra Joe Fernando</span></a>
+						with the <a href="http://www3.nd.edu/~dynamics/" target="_blank"> <span itemprop="sponsor">Environmental Fluid Dynamics Group</span></a>.<br><br>
+						Alongside my interests in CFD and atmospheric dynamics, I'm also passionate about sustainability, energy, and environmental & social justice 
+						through groups like <a href="https://www.facebook.com/WeAre9ND/" target="_blank">Fossil Free ND</a>.
+						At Notre Dame, I'm also the president of the <a href="http://www3.nd.edu/~acmsgso/" target="_blank">SIAM Student Chapter and ACMS Student Organization</a>.
+                    </div>
+                </div>
+            </div>
+			</div>
+            <div class="letterTiles">
+				<div id="how"class="accent" style="font-size:4.5vmin">How!</div>
+				<div id="that"class="accent" style="font-size:4.5vmin">That's</div>
+				<div id="qr"class="accent"></div>
+				<div id="w"class="accent">w</div>
+				<div id="o"class="accent">o</div>
+				<div id="h"class="accent">H</div>
+				
+				<div id="l"class="letter mid">L</div>
+				<div id="e"class="letter mid">E</div>
+				<div id="info"class="accent"></div>
+				<div id="i"class="letter mid">I</div>
+				<div id="n"class="letter mid">N</div>
+				<div id="a"class="letter mid">A</div>
+				<div id="d"class="letter mid">D</div>
+				
+            </div>
+		</div>
+    </section>
+	
+	<div id="modal" class="w3-modal">
+	<div class="w3-modal-content w3-animate-zoom back">
+	<div class="w3-container">
+		<span id="modal-title"></span>
+		<span onclick="document.getElementById('modal').style.display='none'" class="w3-closebtn" style="display:block">&times;</span>
+		<!--TODO: Default html text is research-->
+		<br>
+		<span id="modal-content">
+			TODO: Will write up at a later date!
+		</span>
+	</div></div></div>
+	<div id="lockClick"></div>
+</div>
+<div class="back" id="hideAll"><a href="javascript:toggleGUI()">Hide All</a></div>
+<script src="main.js"></script>
+</body>
+</html>
