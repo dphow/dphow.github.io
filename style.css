@@ -112,11 +112,11 @@ display:table-cell;
 border-radius:1vmin;
 }
 #qr{
-background-image:url('FinalDanish_snapcode.png');/* transparent;*/
+background-image:url('icons/FinalDanish_snapcode.png');/* transparent;*/
 background-size: cover;
 }
 #qr:hover{
-background-image:url('pRobinson.png');
+background-image:url('icons/pRobinson.png');
 background-size: cover;
 }
 #redditbox{
@@ -171,7 +171,7 @@ overflow:hidden;
 cursor:pointer;
 }
 #fb{
-background: url('contactItems.png') no-repeat;
+background: url('icons/contactItems.png') no-repeat;
 background-size:cover;
 background-position:0% 0%;
 border-top-left-radius: 1vmin;
@@ -186,7 +186,7 @@ margin-left:5.6vmin;
 background-color:rgba(1,1,1,0.1);
 }
 #linkedin{
-background: url('contactItems.png') no-repeat;
+background: url('icons/contactItems.png') no-repeat;
 background-position:50% 0%;
 background-size:cover;
 }
@@ -200,7 +200,7 @@ width:5.6vmin;
 width:22.4vmin;
 }
 #email_inlay{
-background:url('contactItems.png') no-repeat;
+background:url('icons/contactItems.png') no-repeat;
 background-position:100% 0%;
 background-size:cover;
 width:5.6vmin;
@@ -271,7 +271,7 @@ float:left;
 width:6vmin;
 height:6vmin;
 margin:0.5vmin;
-background-image:url("clock.png");
+background-image:url("icons/clock.png");
 background-size:cover;
 }
 #dateString:hover, .timeString:hover{
@@ -286,7 +286,7 @@ cursor:pointer;
 width:6vmin;
 height:6vmin;
 margin:0.5vmin;
-background-image:url("apis.png");
+background-image:url("icons/apis.png");
 background-size:cover;
 }
 #apisInfo{

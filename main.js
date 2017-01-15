@@ -47,7 +47,7 @@ var gifData = "";
 var imgData = "";
 var randIndex = -1;
 function fillBackground(gif) {
-	$("#redditboxContent").html('<img id="redditLogo"src="loader.gif"/>');
+	$("#redditboxContent").html('<img id="redditLogo"src="icons/loader.gif"/>');
 	randIndex = -1;
 	if (backGifNotYetLoaded) {
 		var p1 = $.getJSON("http://www.reddit.com/r/EarthPornGifs/.json?jsonp=?", function(data) {
@@ -108,7 +108,7 @@ function readData (gif) {
 		$("#drawCover").attr("title", picData.title);
 		$("#drawCover").css("background", "url(" + siteURL + ") no-repeat center center fixed").css("background-size", "cover").fadeTo(750, 1);
 		$("#redditboxContent").html('Images courtesy of <a title="Link to reddit Page" target="_blank"href=https://www.reddit.com' + 
-			picData.permalink + '"><img id="redditLogo"src="redditLogo.png" height=30/></a>');
+			picData.permalink + '"><img id="redditLogo"src="icons/redditLogo.png" height=30/></a>');
 		if (!gif) {
 		hueViaKMeans();
 		}
