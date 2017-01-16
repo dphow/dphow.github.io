@@ -62,16 +62,17 @@ transition-duration: 500ms;
 }
 .dash{
 width:84vmin;
-height:12vmin;
+height:10vmin;
 position:absolute;
 bottom:55%;
 left:50%;
 margin:0 0 6vmin -42vmin;
+background-color:rgba(0,0,0,1);
 opacity:0;
 transition: margin 200ms linear;
 }
 .menDown {
-margin-bottom:-6vmin;
+margin-bottom:-4vmin;
 transition: margin 200ms linear;
 }
 #dashText{
@@ -81,7 +82,7 @@ line-height:4vmin;
 margin:auto auto;
 }
 .dash ul {
-padding: 1vmin 1vmin;
+padding: 0.5vmin;
 display:inline-block;
 }
 .about{
@@ -96,11 +97,10 @@ transition-duration: 500ms;
 }
 #aboutText {
 font-size:2vmin;
-line-height:2.5vmin;
+line-height:2.25vmin;
 text-shadow:0 0 rgb(40,40,40);
 margin:1vmin;
 padding:1vmin;
-border-radius:1vmin;
 }
 #aboutOuterWrapper{
 height:100%;
@@ -109,7 +109,6 @@ display:table;
 }
 #aboutInnerWrapper{
 display:table-cell;
-border-radius:1vmin;
 }
 #qr{
 background-image:url('icons/FinalDanish_snapcode.png');/* transparent;*/
@@ -126,7 +125,6 @@ width:30vmin;
 height:6vmin;
 margin-left:-15vmin;
 display:none;
-border-radius: 1vmin 1vmin;
 }
 #redditboxContent{
 margin:0;
@@ -157,11 +155,6 @@ left:50%;
 margin:0 0 6vmin -44vmin;
 z-index:1;
 display:none;
-}
-#GPG{
-float:left;
-font-size:2vmin;
-margin-top:2.5vmin;
 }
 .menu_item{
 margin-top:1.5vmin;
@@ -211,7 +204,7 @@ float:left;
 width:16.8vmin;
 height:9vmin;
 float:left;
-padding-top:1vmin;
+line-height:3vmin;
 font-size:2vmin;
 cursor:text;
 }
@@ -222,16 +215,14 @@ height:100%;
 .info_item{
 position:absolute;
 bottom:6vmin;
-border-radius: 1vmin;
-opacity:0.8;
 display: table;
 }
 #randomQuote{
 position:absolute;
 height:auto;
-width:54vmin;
+width:66vmin;
 padding:2vmin 2vmin;
-margin-left:-27vmin;
+margin-left:-33vmin;
 left:50%;
 bottom:20%;
 display:none;
@@ -243,7 +234,7 @@ position:absolute;
 top:0;
 left:0;
 height:100%;
-width:50%;
+width:50.5%;
 transform:skew(0deg, 6deg);
 z-index: -1;
 }
@@ -253,7 +244,7 @@ position:absolute;
 top:0;
 right:0;
 height:100%;
-width:50.1%;
+width:50.5%;
 transform:skew(0deg, -6deg);
 z-index: -1;
 }
@@ -296,7 +287,6 @@ bottom:4vmin;
 left:2%;
 margin-bottom:10vmin;
 padding:1vmin;
-border-radius:1vmin;
 text-align:left;
 display: none;
 opacity:0;
@@ -304,7 +294,6 @@ z-index:3;
 }
 #apisInfo p{
 padding:1vmin;
-border-radius:1vmin 1vmin;
 text-shadow:-0.3vmin 0.3vmin rgb(40,40,40);
 }
 #infobox{
@@ -313,12 +302,10 @@ right:2%;
 bottom:4vmin;
 margin-bottom:10vmin;
 opacity:0;
-border-radius: 1vmin;
 max-width:20%;
 }
 #infoboxInlay{
 margin:1vmin;
-border-radius:1vmin 1vmin;
 }
 #infoboxInlay p{
 padding:1vmin;
@@ -351,7 +338,8 @@ left:50%;
 transform-origin:top;
 transform:rotateX(90deg);
 transition-duration: 500ms;
-margin:0 0 0 -42vmin;
+margin:4vmin 0 0 -42vmin;
+border-radius:0;
 display:none;
 z-index:2;
 }
@@ -433,7 +421,6 @@ bottom:1vmin;
 left:50%;
 width:10vmin;
 margin-left:-5vmin;
-border-radius: 1vmin 1vmin;
 }
 img{
 margin-bottom:0;
@@ -443,7 +430,8 @@ vertical-align:text-bottom;
 display:none;
 }
 .back,::before,::after{
-background-color:rgba(0,0,0,0.6);
+background-color:rgba(0,0,0,0.5);
+border-radius:1vmin;
 }
 .mid{
 background-color:#c5050c;

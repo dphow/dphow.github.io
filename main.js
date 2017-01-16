@@ -47,7 +47,7 @@ var gifData = "";
 var imgData = "";
 var randIndex = -1;
 function fillBackground(gif) {
-	$("#redditboxContent").html('<img id="redditLogo"src="icons/loader.gif"/>');
+	$("#redditboxContent").html('<img id="redditLogo"src="css/icons/loader.gif"/>');
 	randIndex = -1;
 	if (backGifNotYetLoaded) {
 		var p1 = $.getJSON("http://www.reddit.com/r/EarthPornGifs/.json?jsonp=?", function(data) {
@@ -108,7 +108,7 @@ function readData (gif) {
 		$("#drawCover").attr("title", picData.title);
 		$("#drawCover").css("background", "url(" + siteURL + ") no-repeat center center fixed").css("background-size", "cover").fadeTo(750, 1);
 		$("#redditboxContent").html('Images courtesy of <a title="Link to reddit Page" target="_blank"href=https://www.reddit.com' + 
-			picData.permalink + '"><img id="redditLogo"src="icons/redditLogo.png" height=30/></a>');
+			picData.permalink + '"><img id="redditLogo"src="css/icons/redditLogo.png" height=30/></a>');
 		if (!gif) {
 		hueViaKMeans();
 		}
@@ -243,7 +243,7 @@ function expandLast() {
 			quoteToggle();
 		}
 		$(".dash").css({
-            opacity: 0.6
+            opacity: 1
         });
 		lockClicks(false);
 		showFooters(true);
@@ -343,19 +343,18 @@ function toggleInfo() {
 	document.querySelector("ul:nth-child(2)").style.backgroundColor = "", 
 	infoActive = false) 
 	: ((aboutOpen ? toggleAbout() : 0),
-	$("#menu_container").css("display", "block"), 
-	$("#d,#a,#n").css("z-index", -1), 
-	$("#info").animate({
-        "width": "50vmin"
-    }, 500, function() {
-		$("#menu_container").css("display", "block")
-	}), 
+	$("#d,#a,#n").css("z-index", -1),
 	$("#i").css({
         "box-shadow": "-1vmin 0vmin 1vmin #000000",
 		"transform-origin": "right",
         "transform": "rotateY(25deg)",
 		"cursor": "pointer"
     }),
+	$("#info").animate({
+        "width": "50vmin"
+    }, 500, function() {
+		$("#menu_container").css("display", "block")
+	}),
 	document.querySelector("ul:nth-child(2)").style.backgroundColor = "#F00", 
 	infoActive = true)
 }
