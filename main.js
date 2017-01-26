@@ -379,7 +379,7 @@ function toggleAPIInfo() {
 }
 
 function openMap() {
-	var title = "Map showcasing my travel and places you may know me from.";
+	var title = "Travel and places you may know me from.";
 	$("#modal-title").html(title);
 	//document.querySelector("ul:nth-child(5)").style.backgroundColor = "#F00";
 	$("#modal-content").html('<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1Fiu_6cYbtzj2S7wT6A0L7axEMng" width="99%" height="90%" frameborder="0" style="border:0"></iframe>');
@@ -387,12 +387,10 @@ function openMap() {
 }
 
 function openSchedule() {
-	var title = "My public calendar. Logged in Notre Dame users see more detail.";
+	var title = "Logged in Notre Dame users can see more detail.";
 	//document.querySelector("ul:nth-child(6)").style.backgroundColor = "#F00";
 	$("#modal-title").html(title);
-	$.get("publicCalendar.html", function(page) {
-		$("#modal-content").html(page);
-	});
+	$("#modal-content").load("publicCalendar.html");
 	$("#modal").css("display","block");
 }
 
@@ -433,12 +431,10 @@ function openCV() {
 }
 
 function openFun() {
-	var title = "Fun Stories and Things I Enjoy:";
+	var title = "Fun Stuff About Me";
 	//document.querySelector("ul:nth-child(6)").style.backgroundColor = "#F00";
 	$("#modal-title").html(title);
-	$.get("funAbout.html", function(page) {
-		$("#modal-content").html(page);
-	});
+	$("#modal-content").load("funAbout.html");
 	$("#modal").css("display","block");
 }
 
