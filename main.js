@@ -50,7 +50,7 @@ function fillBackground(gif) {
 	$("#redditboxContent").html('<img id="redditLogo"src="css/icons/loader.gif"/>');
 	randIndex = -1;
 	if (backGifNotYetLoaded) {
-		var p1 = $.getJSON("http://www.reddit.com/r/EarthPornGifs/.json?jsonp=?", function(data) {
+		var p1 = $.getJSON("https://www.reddit.com/r/EarthPornGifs/.json?jsonp=?", function(data) {
 			gifData = data;
 			backGifNotYetLoaded = false;
 			if (gif) {
@@ -67,7 +67,7 @@ function fillBackground(gif) {
 		readData(gif);
 	}
 	if (backImageNotYetLoaded) {
-		var p2 = $.getJSON("http://www.reddit.com/r/EarthPorn/.json?jsonp=?", function(data) {
+		var p2 = $.getJSON("https://www.reddit.com/r/EarthPorn/.json?jsonp=?", function(data) {
 			imgData = data;
 			backImageNotYetLoaded = false;
 			if (!gif) {
