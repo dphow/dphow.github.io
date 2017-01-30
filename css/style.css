@@ -2,7 +2,10 @@
 margin:0; padding:0;
 color:#FFFFFF;
 }
-html,body{height:100%; width:100%}
+html,body{
+height:100%;
+width:100%
+}
 body{
 font-family:"Crimson Text", "Times New Roman", serif; 
 font-size:3vmin;
@@ -95,7 +98,7 @@ transform-origin:bottom;
 transform: rotateX(-90deg);
 transition-duration: 500ms;
 }
-#aboutText {
+#aboutText{
 font-size:2vmin;
 line-height:2.25vmin;
 text-shadow:0 0 rgb(40,40,40);
@@ -236,7 +239,7 @@ left:0;
 height:100%;
 width:50.5%;
 transform:skew(0deg, 6deg);
-z-index: -1;
+z-index:-1;
 }
 #randomQuote:after {
 content:'';
@@ -246,7 +249,7 @@ right:0;
 height:100%;
 width:50.5%;
 transform:skew(0deg, -6deg);
-z-index: -1;
+z-index:-1;
 }
 #status{
 width:7vmin;
@@ -301,8 +304,11 @@ position:absolute;
 right:2%;
 bottom:4vmin;
 margin-bottom:10vmin;
+font-size:2.5vmin;
+line-height:2.75vmin;
 opacity:0;
 max-width:20%;
+z-index:3;
 }
 #infoboxInlay{
 margin:1vmin;
@@ -449,15 +455,15 @@ display:none;
 
 .mySlides img{
 max-width:95%;
-height:45vh;
+height:35vmin;
 }
 
 .slideshow-container {
   position: relative;
   margin: auto;
-  width:80%;
-  height:45vh;
-  background-color:#333333
+  width:90%;
+  height:35vmin;
+  background-color:#333333;
 }
 
 /* Next & previous buttons */
@@ -489,7 +495,8 @@ height:45vh;
 .text {
   color: #f2f2f2;
   font-size: 2vmin;
-  padding: 8px 12px;
+  line-height:2.25vmin;
+  padding: 0.1vmin 0.5vmin;
   position: absolute;
   bottom: 8px;
   width: 80%;
@@ -509,9 +516,9 @@ height:45vh;
 /* The dots/bullets/indicators */
 .dot {
   cursor:pointer;
-  height: 13px;
-  width: 13px;
-  margin: 0 2px;
+  height: 1vmin;
+  width: 1vmin;
+  margin: 2px 2px;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
@@ -520,6 +527,19 @@ height:45vh;
 
 .active, .dot:hover {
   background-color: #717171;
+}
+
+#funText{
+text-align:left; 
+font-size: 1.75vmin; 
+line-height:2vmin;
+}
+
+#funText ul{
+padding-left:2vmin; 
+list-style-position:inside; 
+font-size:1.5vh;
+line-height:1.75vmin;
 }
 
 /* Fading animation */
