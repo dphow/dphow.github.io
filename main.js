@@ -196,7 +196,7 @@ function quoteToggle() {
 }
 
 function newQuote() {
-	var p = $.getJSON("http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=?", function(data) {
+	var p = $.getJSON("https://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=?", function(data) {
 		$("#quote").html(data.quoteText + "<br>***" + data.quoteAuthor + "***");
 	});
 	setTimeout(function(){
