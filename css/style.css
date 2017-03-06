@@ -17,6 +17,9 @@ overflow:hidden;
 a:hover{
 color: #DDD;
 }
+.fa, .ai{
+text-decoration: none;
+}
 .container{
 background-color:#DDDDDD;
 height:100%;
