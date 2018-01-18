@@ -249,7 +249,7 @@ function expandLast() {
 		showFooters(true);
 		$(".letterTiles").click(toggleNickname);
 		$("#qr").click(function() {
-			window.open("https://www.youtube.com/watch?v=ZrZz2uTWNWQ","_blank").focus();
+			window.open("https://www.youtube.com/watch?v=vDxrW-9lY7w","_blank").focus();
 		});
 	});
 }
