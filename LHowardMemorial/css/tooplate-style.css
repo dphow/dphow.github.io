@@ -103,14 +103,14 @@ a:focus {
 }
 
 .tm-bg-white {
-	padding: 20px;
+	padding: 1vmin;
 	background-color: white;
 	opacity: 0.8;
 	width: 100%;
 }
 
 .tm-bg-white2 {
-		padding: 20px;
+		padding: 2vmin;
 		background-color: white;
 		opacity: 0.8;
 		width: 100%;
@@ -118,9 +118,9 @@ a:focus {
 }
 
 .tm-bg-white-transparent {
-	margin-top: 20px; 
-	margin-bottom: 20px; 
-	padding: 20px;
+	margin-top: 2vmin; 
+	margin-bottom: 2vmin; 
+	padding: 1vmin;
 	background-color: #ffffffc4;
 	/* max-width: 340px; */
 	width: 100%;
@@ -135,26 +135,26 @@ a:focus {
 	float: right;
 	background-color: #ffffffc4;
 	text-align: left;
-	margin-top: 20px; 
-	margin-bottom: 20px; 
-	padding: 40px;
+	margin-top: 2vmin; 
+	margin-bottom: 2vmin; 
+	padding: 1vmin;
 }
 
 .tm-bg-white-transparent-center {
 	display: inline-block;
 	background-color: #ffffffc4;
 	text-align: center;
-	margin-top: 20px; 
-	margin-bottom: 20px; 
-	padding: 40px;
+	margin-top: 2vmin; 
+	margin-bottom: 2vmin; 
+	padding: 1vmin;
 }
 .tm-bg-white-transparent-right {
 	float: left;
 	background-color: #ffffffc4;
 	text-align: right;
-	margin-top: 20px; 
-	margin-bottom: 20px; 
-	padding: 40px;
+	margin-top: 2vmin; 
+	margin-bottom: 2vmin; 
+	padding: 1vmin;
 }
 
 .tm-img-container {
