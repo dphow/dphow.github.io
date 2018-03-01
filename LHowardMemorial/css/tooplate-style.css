@@ -8,7 +8,7 @@ http://www.tooplate.com/view/2096-individual
 
 body {
 	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-	font-size: 2.5vmin;
+	font-size: 3vmin;
 	font-weight: 300;
 	overflow-x: hidden;
 }
@@ -17,7 +17,7 @@ h1 {
 	font-size: 5vmin;
 	/* text-shadow: 2px 2px 8px #000000; */
 	font-family: 'Dancing Script', cursive;
-	padding-bottom: 20px;
+	padding-bottom: 2vmin;
 	font-weight: bold;
 }
 
@@ -31,7 +31,7 @@ h2 {
 h3 {
 	font-size: 3.5vmin;
 	color: green;
-	padding-bottom: 10px;
+	padding-bottom: 1vmin;
 }
 
 h4 {
@@ -71,12 +71,13 @@ a:focus {
 }
 
 .tm-page-2-content {
-	max-width: 800px;
+	max-width: 80vw;
 	height: 80vh;
 }
 
 .tm-page-3-content {
 	float: right;
+	width: 100%;
 }
 
 .tm-page-4-content { 
@@ -119,7 +120,7 @@ a:focus {
 .tm-bg-white-transparent {
 	margin-top: 20px; 
 	margin-bottom: 20px; 
-	padding: 40px;
+	padding: 20px;
 	background-color: #ffffffc4;
 	/* max-width: 340px; */
 	width: 100%;

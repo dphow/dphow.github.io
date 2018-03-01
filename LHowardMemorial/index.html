@@ -34,6 +34,13 @@ http://www.tooplate.com/view/2096-individual
       <body>
 
         <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
         <div class="parallax-window" data-parallax="scroll" data-image-src="img/IMG_3446.jpg">
           <section class="container tm-page-1-content">
@@ -55,12 +62,12 @@ http://www.tooplate.com/view/2096-individual
         </div>
 
         <div id="services" class="parallax-window" data-parallax="scroll" data-image-src="img/IMG_0831.JPG">
-        <div class="row tm-page-3-content">
+        <div class="row tm-page-2-content">
             <article  class="col-md-10 tm-bg-white-transparent-left">
               <header><h3>Visitation, Burial, and Celebration of Life Services</h3></header>
               <ul>
               <li><b>Monday March 5th @ 3-7pm</b><br>
-                Visitation at Palmer’s Funeral Home<br>
+                Visitation at <a href="http://www.palmerfuneralhomes.com/notices/Linda-Howard" target="_blank">Palmer’s Funeral Home</a><br>
                 <a href="https://www.google.com/maps/place/17131+Cleveland+Rd,+South+Bend,+IN+46635/data=!4m2!3m1!1s0x8816d24698125ce9:0x94e194c5d928ec3e?sa=X&ved=0ahUKEwi_1Zqv1svZAhXI54MKHdy5BfEQ8gEIJjAA" target="_blank">
                 17131 Cleveland Rd, South Bend, IN</a></li>
 
@@ -75,27 +82,16 @@ http://www.tooplate.com/view/2096-individual
                 17195 Cleveland Rd, South Bend, IN</a></li>
             </ul>
             </article>
-            <!--
-            <article class="col-xs-6 col-md-4 tm-bg-white-transparent">
-              <header><h3>Duis euismod</h3></header>
-              <p>Orci varius natoque penatibus et  magnis dis parturient montes, nascetur ridiculus mus. Praesent vel est varius nisi posuere aliquet. Aliquam luctus, dolor vel euismod scelerisque, sem mi commodo nisi.</p>
-            </article>
-            <article class="col-xs-6 col-md-4 tm-bg-white-transparent">
-              <header><h3>Ipsum vitae mattis</h3></header>
-              <p>Orci varius natoque penatibus et  magnis dis parturient montes, nascetur ridiculus mus. Praesent vel est varius nisi posuere aliquet. Aliquam luctus, sem mi commodo nisi.</p>
-            </article>
-            -->
           </div>
         </div>
 
         <div id="obit" class="parallax-window" data-parallax="scroll" data-image-src="img/painting.jpg">
           <section class="container tm-page-2-content">
-            <div class="row">
-
+            <div class="row" style="height:80vh">
               <article class="col-md-12 tm-article tm-bg-white-transparent">
-                <header><h2>Obituary</h2></header>
+                <header><h1>Obituary</h1></header>
                 <h4>and <a href="https://docs.google.com/spreadsheets/d/173TjZUy1qbmoUeE3Am3gzuqddk76MWg3X60S1dr66Sw/edit?usp=sharing" target="_blank">stories shared by colleagues and friends</a>. Contact <a href="" data-u="dphoward13" data-d="gmail.com" target="_blank">Daniel</a> to add your story.</h4>
-                <iframe src="https://drive.google.com/file/d/17zYA681XtYjCllXkiVMymKYZuMC2lLuK/preview" width="100%" height="400px"></iframe>
+                <iframe src="https://drive.google.com/file/d/17zYA681XtYjCllXkiVMymKYZuMC2lLuK/preview" width="100%" height="80%"></iframe>
               </article>
             </div>
           </section>
@@ -104,24 +100,14 @@ http://www.tooplate.com/view/2096-individual
         <div id="pics" class="parallax-window" data-parallax="scroll" data-image-src="img/horns.jpg">
           <div class="container">
             <div class="row tm-page-3-content">
-              <div class="tm-img-container">
-                <div class="tm-img-slider">
- 
-                    <a class="image-link" href="img/IMG_0402.jpg"><img src="img/IMG_0402.jpg" alt="Image" class="tm-slider-img"></a>
-                    <a class="image-link" href="img/IMG_2588.jpg"><img src="img/IMG_2588.jpg" alt="Image" class="tm-slider-img"></a>
-                    <a class="image-link" href="img/IMG_2674.jpg"><img src="img/IMG_2674.jpg" alt="Image" class="tm-slider-img"></a>  
-                    <a class="image-link" href="img/IMG_2770.JPG"><img src="img/IMG_2770.JPG" alt="Image" class="tm-slider-img"></a>
-                    <a class="image-link" href="img/IMG_2978.JPG"><img src="img/IMG_2978.JPG" alt="Image" class="tm-slider-img"></a>
-                    <a class="image-link" href="img/IMG_3088.JPG"><img src="img/IMG_3088.JPG" alt="Image" class="tm-slider-img"></a>
-                      
-                </div>
-              </div>
+              <div id="flickrembed" style="width: 100%;"></div><script src='https://flickrembed.com/embed_v2.js.php?source=flickr&layout=responsive&input=www.flickr.com/photos/140538581@N08/albums/72157688352446710&sort=0&by=album&theme=default&scale=fit&limit=50&skin=alexis&autoplay=true'></script>
+              <small class="tm-bg-white-transparent" style="display: block; text-align: center; margin: 0 auto;">Powered by <a href="https://flickrembed.com">flickr embed</a>.</small>
             </div>
           </div>
         </div>
 
         <div id="donate" class="parallax-window" data-parallax="scroll" data-image-src="img/riley.jpg">
-          <div class="row tm-page-3-content">
+          <div class="row tm-page-4-content">
             <article  class="col-xs-6 col-md-8 tm-bg-white-transparent">
               <header><h3>Support Music Education in South Bend City Schools</h3></header>
               <p>More details to come on how to contribute.</p>
@@ -143,8 +129,8 @@ http://www.tooplate.com/view/2096-individual
           <div class="container tm-bg-white-transparent">
             <header><h3>Contact the Family</h3></header>
             <div class="row tm-page-4-content">
-              <div class="col-lg-8">
-                <div class="fb-page" data-href="https://www.facebook.com/profile.php?id=100006038237745" data-tabs="timeline" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
+              <div class="col-lg-8 fb-page">
+                <div class="fb-page" data-href="https://www.facebook.com/profile.php?id=100006038237745&amp;ref=br_rs" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
               </div>
               <div class="col-lg-4">
                 <div class="tm-address-box">
@@ -209,14 +195,6 @@ http://www.tooplate.com/view/2096-individual
                 });
                }
              }
-
-             (function(d, s, id) {
-              var js, fjs = d.getElementsByTagName(s)[0];
-              if (d.getElementById(id)) return;
-              js = d.createElement(s); js.id = id;
-              js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12';
-              fjs.parentNode.insertBefore(js, fjs);
-              }(document, 'script', 'facebook-jssdk'));
 
             function createMailtoLinks() {
               $('A[data-u][href=""]').each(function(){
