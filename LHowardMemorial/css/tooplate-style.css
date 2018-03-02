@@ -81,6 +81,7 @@ a:focus {
 
 .tm-page-4-content { 
 	padding-top: 1vh;	
+	max-width: 80vw;
 }
 
 .tm-page-5-content { 
