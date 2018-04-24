@@ -97,8 +97,8 @@ display:inline-block;
 }
 .about{
 width: 96vmin;
-position:absolute;
-top:2vmin; /* Quick fix, need to reference bottom of div to bottom of letterTiles */
+position:relative;
+bottom:-2vmin; /* Quick fix, need to reference bottom of div to bottom of letterTiles */
 left:50%;
 margin-left:-48vmin;
 transform-origin:bottom;
