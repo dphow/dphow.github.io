@@ -10,6 +10,7 @@
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="stylesheet" href="css/academicons.min.css"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
 <script src="https://use.fontawesome.com/50349488a8.js"></script>
 <script src="https://apis.google.com/js/api.js"></script>
 <!--<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>-->
@@ -27,7 +28,8 @@
 	<div id="trackerGlobe"><script type="text/javascript" src="//ra.revolvermaps.com/0/0/5.js?i=0pi3kvzsbyy&amp;m=0&amp;s=90&amp;c=ff0000&amp;cr1=ffffff" async="async"></script></div>
 	
 	<section name="GUI">
-	<div class="dash"><div id="dashText">
+	<div class="dash">
+		<div id="dashText">
                 <ul><a href="javascript:toggleAbout()">About</a></ul>
                 <ul><a href="javascript:toggleInfo()">Contact</a></ul>
 				<ul><a href="javascript:toggleProjects()">Projects</a></ul>
@@ -78,7 +80,7 @@
 			<a href="javascript:fillBackground(true)"> GIF </a>
 		</div>
 	</div>
-    <div id="status"class="back info_item"><div id="clock"></div><div id="date_time"></div></div>
+    <div id="status" class="back info_item"><div id="clock"></div><div id="date_time"></div></div>
     <div id="apisInfo" class="back">
         <p>
             <a href="http://forismatic.com/en/api/" target="_blank">Forismatic API</a><br/>
@@ -139,21 +141,25 @@
             </div>
 			</div>
             <div class="letterTiles">
-				<div id="how"class="accent" style="font-size:4.5vmin">How!</div>
-				<div id="that"class="accent" style="font-size:4.5vmin">That's</div>
-				<div id="qr"class="accent"></div>
-				<div id="w"class="accent">w</div>
-				<div id="o"class="accent">o</div>
-				<div id="h"class="accent">H</div>
+				<div id="how" class="accent" style="font-size:4.5vmin">How!</div>
+				<div id="that" class="accent" style="font-size:4.5vmin">That's</div>
+				<div id="qr" class="accent"></div>
+				<div id="w" class="accent">w</div>
+				<div id="o" class="accent">o</div>
+				<div id="h" class="accent">H</div>
 				
-				<div id="l"class="letter mid">L</div>
-				<div id="e"class="letter mid">E</div>
-				<div id="info"class="accent"></div>
-				<div id="i"class="letter mid">I</div>
-				<div id="n"class="letter mid">N</div>
-				<div id="a"class="letter mid">A</div>
-				<div id="d"class="letter mid">D</div>
-				
+				<div id="l" class="letter mid">L</div>
+				<div id="e" class="letter mid">E</div>
+				<div id="info" class="accent"></div>
+				<div id="i" class="letter mid">I</div>
+				<div id="n" class="letter mid">N</div>
+				<div id="a" class="letter mid">A</div>
+				<div id="d" class="letter mid">D</div>
+				<div id="cover" class="letter"></div>
+				<div id="head" class="letter">
+					<div class="headBack"></div>
+					<div class="headFront"></div>
+				</div>
             </div>
 		</div>
     </section>
@@ -176,10 +182,6 @@
 			<br><br>
 			<span style="font-size:2.25vmin"><strong>Monsoon Dynamics and Intraseasonal Oscillations</strong></span><br>
 			Numerical weather predition and climate models rely on complex interconnected models which solve for the present and future atmospheric and oceanic states. 
-
-			<br><br>
-			<span style="font-size:2.25vmin"><strong>Particle and Reactive Transport on GPU Systems</strong></span><br>
-			TODO
 			</div>
 		</span>
 	</div></div></div>

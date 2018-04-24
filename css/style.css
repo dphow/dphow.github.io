@@ -47,7 +47,7 @@ width:12vmin;
 height:12vmin;
 left:50%;
 position:absolute;
-margin:0 0 0 -6vmin;
+margin-left:-6vmin;
 font-size:12vmin;
 text-shadow:-0.5vmin 0.5vmin rgb(40,40,40);
 line-height:12vmin;
@@ -59,44 +59,48 @@ so we can't rotate at the center without defined dimensions */
 width:84vmin;
 height:12vmin;
 position:absolute;
-bottom:55%;
+top:30%;
 left:50%;
-margin:0 0 6vmin -42vmin;
+margin-left:-42vmin;
 transform-origin:center 12vmin;
 transform: rotateX(0deg);
 transition-duration: 500ms;
 }
 .dash{
-width:84vmin;
-height:10vmin;
+width:96vmin;
+height:12vmin;
 position:absolute;
-bottom:55%;
-left:50%;
-margin:0 0 6vmin -42vmin;
+top:30%;
+left: 50%;
+margin-left:-48vmin;
 background-color:rgba(0,0,0,1);
 opacity:0;
-transition: margin 200ms linear;
+transition: height 200ms linear;
 }
 .menDown {
-margin-bottom:-4vmin;
-transition: margin 200ms linear;
+height:22vmin;
+transition: height 200ms linear;
 }
 #dashText{
-display:table;
+position: absolute;
+display: block;
 font-size:3.5vmin;
 line-height:4vmin;
-margin:auto auto;
+width: 100%;
+margin: 0 auto;
+bottom: 0;
+left: 0;
 }
 .dash ul {
 padding: 0.5vmin;
 display:inline-block;
 }
 .about{
-width: 84vmin;
+width: 96vmin;
 position:absolute;
-bottom:55%;
+bottom:58%;
 left:50%;
-margin:0 0 6vmin -42vmin;
+margin-left:-48vmin;
 transform-origin:bottom;
 transform: rotateX(-90deg);
 transition-duration: 500ms;
@@ -115,6 +119,21 @@ display:table;
 }
 #aboutInnerWrapper{
 display:table-cell;
+}
+#head{
+z-index: -1;
+}
+#cover{
+background-color:rgba(0,0,0,1);
+z-index: -2;
+}
+.headFront{
+background-image:url('icons/Howard_ProfHeadshot_square.png');
+background-size: cover;
+}
+.headBack{
+background-image:url('icons/funHead.png');/* transparent;*/
+background-size: cover;
 }
 #qr{
 background-image:url('icons/FinalDanish_snapcode.png');/* transparent;*/
@@ -142,7 +161,6 @@ border:0;
 }
 #info{
 width:0vmin;
-height:12vmin;
 left:auto;
 right:50%;
 position:absolute;
@@ -154,9 +172,9 @@ overflow:hidden;
 }
 #menu_container{
 height:12vmin;
-width:38vmin;
+width:44vmin;
 position:absolute;
-bottom:55%;
+bottom:52%;
 left:50%;
 margin:0 0 6vmin -44vmin;
 z-index:1;
@@ -226,9 +244,9 @@ display: table;
 #randomQuote{
 position:absolute;
 height:auto;
-width:66vmin;
+width:66.6vmin;
 padding:2vmin 2vmin;
-margin-left:-33vmin;
+margin-left:-33.3vmin;
 left:50%;
 bottom:20%;
 display:none;
@@ -340,14 +358,14 @@ cursor:pointer;
 }
 #projects{
 height:38vmin;
-width:84vmin;
+width:96vmin;
 position:absolute;
-top:45%;
+top:38%;
 left:50%;
 transform-origin:top;
 transform:rotateX(90deg);
 transition-duration: 500ms;
-margin:4vmin 0 0 -42vmin;
+margin:4vmin 0 0 -48vmin;
 border-radius:0;
 display:none;
 z-index:2;
@@ -357,18 +375,18 @@ font-size:4vmin;
 }
 #projectsGallery{
 height:34vmin;
-width:84vmin;
+width:96vmin;
 position:absolute;
 overflow:hidden;
 }
 #projectsGalleryInner{
 height:100%;
-width:168vmin; /* num projects * width of gallery */
+width:192vmin; /* num projects * width of gallery */
 margin-left:0vmin;
 }
 .projectsElement{
 height:29vmin;
-width:84vmin;
+width:96vmin;
 background-size:cover;
 }
 #projectsGallery ul{

@@ -208,7 +208,7 @@ function expandFirst() {
 	$("#h,#o,#w,#qr,#that,#how").animate({
         marginLeft: "+=30vmin"
     }, 1e3);
-    $("#d").animate({
+    $("#d,#head,#cover").animate({
         marginLeft: "-=30vmin"
     }, 1e3);
     $("#a").animate({
@@ -229,14 +229,17 @@ function expandFirst() {
 }
 
 function expandLast() {
+	$("#head,#cover").animate({
+        marginLeft: "-=12vmin"
+    }, 1e3);
     $(".letter").animate({
-        marginLeft: "-=6vmin"
+        marginLeft: "-=0vmin"
     }, 1e3);
     $("#o,#w,#qr,#that,#how").animate({
-        marginLeft: "+=6vmin"
+        marginLeft: "+=12vmin"
     }, 1e3);
 	$("#h").animate({
-        marginLeft: "+=6vmin"
+        marginLeft: "+=12vmin"
     }, 1e3, function() {
 		if (backImageNotYetLoaded) {
 			fillBackground(false); //false loads image, true loads gif
@@ -245,6 +248,8 @@ function expandLast() {
 		$(".dash").css({
             opacity: 1
         });
+        $("#head").flip({trigger: "manual", front: ".headFront", back: ".headBack", speed: 1e3});
+        $(".headFront").css("margin-top","-12vmin");
 		lockClicks(false);
 		showFooters(true);
 		$(".letterTiles").click(toggleNickname);
@@ -258,10 +263,9 @@ function toggleNickname() {
 	lockClicks(true);
 	if (infoActive) {
 		toggleInfo();
-		lockClicks(false);
-		return;
 	}
 	if (nicknameOn) {
+		$("#head").flip(false);
 		$("#h").animate({
 			marginLeft: "+=60vmin"
 		}, 1e3);
@@ -282,6 +286,7 @@ function toggleNickname() {
 			lockClicks(false);
 		});
 	} else {
+		$("#head").flip(true);
 		$("#h,#o,#w,#qr,#that,#how").css("z-index", 1);
 		$("#h").animate({
 			marginLeft: "-=60vmin"
@@ -351,7 +356,7 @@ function toggleInfo() {
 		"cursor": "pointer"
     }),
 	$("#info").animate({
-        "width": "50vmin"
+        "width": "42vmin"
     }, 500, function() {
 		$("#menu_container").css("display", "block")
 	}),
@@ -405,28 +410,28 @@ function openResearch() {
 function openResume() {
 	$("#modal-title").html("Last Updated: ");
 	var key = "AIzaSyDlUs1fHWB2A_-up3aN7Wffa8VxifUi0jM";
-	var fileId = "0B5Nhs9ia_O4HM01iMFFoOVZYVkE";
+	var fileId = "1hu8cshqy54vM8L_vyyWOyENE08HVCn_c";
 	var url = "https://www.googleapis.com/drive/v3/files/" + fileId + 
 				"?fields=modifiedTime&key=" + key;
 	//document.querySelector("ul:nth-child(7)").style.backgroundColor = "#F00";			
 	var p = $.getJSON(url, function(data) {
 		$("#modal-title").append(data.modifiedTime.substr(0,data.modifiedTime.indexOf("T")));
 	});
-	$("#modal-content").html('<iframe src="https://docs.google.com/viewer?srcid=0B5Nhs9ia_O4HM01iMFFoOVZYVkE&pid=explorer&efh=false&a=v&chrome=false&embedded=true" width="99%" height="90%" frameborder="0" scrolling="no"></iframe>');
+	$("#modal-content").html('<iframe src="https://docs.google.com/viewer?srcid=1hu8cshqy54vM8L_vyyWOyENE08HVCn_c&pid=explorer&efh=false&a=v&chrome=false&embedded=true" width="99%" height="90%" frameborder="0" scrolling="no"></iframe>');
 	$("#modal").css("display","block");
 }
 
 function openCV() {
 	$("#modal-title").html("Last Updated: ");
 	var key = "AIzaSyDlUs1fHWB2A_-up3aN7Wffa8VxifUi0jM";
-	var fileId = "0B5Nhs9ia_O4HR3N6Q21LVHBydFU";
+	var fileId = "1IL9_CMhr7T2ozE1BJdAuxedwWZd7YnZb";
 	var url = "https://www.googleapis.com/drive/v3/files/" + fileId + 
 				"?fields=modifiedTime&key=" + key;
 	//document.querySelector("ul:nth-child(7)").style.backgroundColor = "#F00";			
 	var p = $.getJSON(url, function(data) {
 		$("#modal-title").append(data.modifiedTime.substr(0,data.modifiedTime.indexOf("T")));
 	});
-	$("#modal-content").html('<iframe src="https://docs.google.com/viewer?srcid=0B5Nhs9ia_O4HR3N6Q21LVHBydFU&pid=explorer&efh=false&a=v&chrome=false&embedded=true" width="99%" height="90%" frameborder="0" scrolling="no"></iframe>');
+	$("#modal-content").html('<iframe src="https://docs.google.com/viewer?srcid=1IL9_CMhr7T2ozE1BJdAuxedwWZd7YnZb&pid=explorer&efh=false&a=v&chrome=false&embedded=true" width="99%" height="90%" frameborder="0" scrolling="no"></iframe>');
 	$("#modal").css("display","block");
 }
 
@@ -671,7 +676,7 @@ function scrollProj(a) {
     null != currProjIndex && (-1 == a && (a = projectsLength + a), 
 	a %= projectsLength, 
 	$("#projectsGalleryInner").animate({
-        marginLeft: -84 * a + "vmin"
+        marginLeft: -96 * a + "vmin"
     }, 350), currProjIndex = a)
 }
 
