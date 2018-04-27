@@ -360,7 +360,7 @@ cursor:pointer;
 height:38vmin;
 width:96vmin;
 position:absolute;
-top:38vmin;
+top:48vmin;
 left:50%;
 transform-origin:top;
 transform:rotateX(90deg);
