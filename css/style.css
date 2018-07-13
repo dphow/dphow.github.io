@@ -50,7 +50,7 @@ position:absolute;
 margin-left:-6vmin;
 font-size:12vmin;
 text-shadow:-0.5vmin 0.5vmin rgb(40,40,40);
-line-height:12vmin;
+line-height:14vmin;
 cursor:pointer;
 }
 /* This needs dimensions because 50% of height zero is 0, 
@@ -127,12 +127,7 @@ z-index: -1;
 background-color:rgba(0,0,0,1);
 z-index: -2;
 }
-.headFront{
-background-image:url('icons/Howard_ProfHeadshot_square.png');
-background-size: cover;
-}
-.headBack{
-background-image:url('icons/funHead.png');/* transparent;*/
+.headFront, .headBack{
 background-size: cover;
 }
 #qr{
