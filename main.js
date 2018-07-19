@@ -49,25 +49,8 @@ var randIndex = -1;
 function fillBackground(gif) {
 	$("#redditboxContent").html('<img id="redditLogo"src="css/icons/loader.gif"/>');
 	randIndex = -1;
-	if (backGifNotYetLoaded) {
-		var p1 = $.getJSON("https://www.reddit.com/r/EarthPornGifs/.json?jsonp=?", function(data) {
-			gifData = data;
-			backGifNotYetLoaded = false;
-			if (gif) {
-				readData(gif);
-			}
-		});
-		setTimeout(function(){ 
-			p1.abort();
-			if (randIndex == -1) {
-				console.log("Timeout on reddit background gif get.");
-			}
-		}, 3000);
-	} else if (gif) {
-		readData(gif);
-	}
 	if (backImageNotYetLoaded) {
-		var p2 = $.getJSON("https://www.reddit.com/r/EarthPorn/.json?jsonp=?", function(data) {
+		var p1 = $.getJSON("https://www.reddit.com/r/EarthPorn/.json?jsonp=?", function(data) {
 			imgData = data;
 			backImageNotYetLoaded = false;
 			if (!gif) {
@@ -75,12 +58,30 @@ function fillBackground(gif) {
 			}
 		});
 		setTimeout(function(){ 
-			p2.abort();
+			p1.abort();
 			if (randIndex == -1) {
 				console.log("Timeout on reddit background image get.");
 			}
 		}, 3000);	
 	} else if (!gif) {
+		readData(gif);
+	}
+
+	if (backGifNotYetLoaded && gif) {
+		var p2 = $.getJSON("https://www.reddit.com/r/EarthPornGifs/.json?jsonp=?", function(data) {
+			gifData = data;
+			backGifNotYetLoaded = false;
+			if (gif) {
+				readData(gif);
+			}
+		});
+		setTimeout(function(){ 
+			p2.abort();
+			if (randIndex == -1) {
+				console.log("Timeout on reddit background gif get.");
+			}
+		}, 3000);
+	} else if (gif) {
 		readData(gif);
 	}
 }
@@ -196,7 +197,7 @@ function quoteToggle() {
 }
 
 function newQuote() {
-	var p = $.getJSON("http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=?", function(data) {
+	var p = $.getJSON("https://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=?", function(data) {
 		$("#quote").html(data.quoteText + "<br>***" + data.quoteAuthor + "***");
 	});
 	setTimeout(function(){
