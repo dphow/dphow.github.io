@@ -376,7 +376,7 @@ overflow:hidden;
 }
 #projectsGalleryInner{
 height:100%;
-width:192vmin; /* num projects * width of gallery */
+width:576vmin; /* num projects * width of gallery */
 margin-left:0vmin;
 }
 .projectsElement{
