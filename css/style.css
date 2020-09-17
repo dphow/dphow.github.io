@@ -59,7 +59,7 @@ so we can't rotate at the center without defined dimensions */
 width:84vmin;
 height:12vmin;
 position:absolute;
-top:30vmin;
+top:22vmin;
 left:50%;
 margin-left:-42vmin;
 transform-origin:center 12vmin;
@@ -70,7 +70,7 @@ transition-duration: 500ms;
 width:96vmin;
 height:12vmin;
 position:absolute;
-top:30vmin;
+top:22vmin;
 left: 50%;
 margin-left:-48vmin;
 background-color:rgba(0,0,0,1);
@@ -169,7 +169,7 @@ overflow:hidden;
 height:12vmin;
 width:44vmin;
 position:absolute;
-top:30vmin;
+top:22vmin;
 left:50%;
 margin:0 0 6vmin -44vmin;
 z-index:1;
@@ -355,7 +355,7 @@ cursor:pointer;
 height:38vmin;
 width:96vmin;
 position:absolute;
-top:48vmin;
+top:40vmin;
 left:50%;
 transform-origin:top;
 transform:rotateX(90deg);
@@ -376,7 +376,7 @@ overflow:hidden;
 }
 #projectsGalleryInner{
 height:100%;
-width:576vmin; /* num projects * width of gallery */
+width:672vmin; /* num projects * width of gallery */
 margin-left:0vmin;
 }
 .projectsElement{
