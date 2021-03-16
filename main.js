@@ -393,10 +393,7 @@ function openMap() {
 }
 
 function openSchedule() {
-	var title = `<strong>My Calendar</strong> <br> 
-				 Schedule <a href=\"https://calendly.com/ucar-dhoward/15min\" target=\"_blank\">15</a>/
-				 		<a href=\"https://calendly.com/ucar-dhoward/30min\" target=\"_blank\">30</a>/
-				 		<a href=\"https://calendly.com/ucar-dhoward/60min\" target=\"_blank\">60</a> minute meeting with me`;
+	var title = `<text style=\"color:#3F51B5;\">UCAR</text> events often required, others likely flexible`;
 	//document.querySelector("ul:nth-child(6)").style.backgroundColor = "#F00";
 	$("#modal-title").html(title);
 	$("#modal-content").load("publicCalendar.html");
