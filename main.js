@@ -393,7 +393,7 @@ function openMap() {
 }
 
 function openSchedule() {
-	var title = `<text style=\"color:#3F51B5;\">UCAR</text> events often required, others likely flexible`;
+	var title = "My Calendars";
 	//document.querySelector("ul:nth-child(6)").style.backgroundColor = "#F00";
 	$("#modal-title").html(title);
 	$("#modal-content").load("publicCalendar.html");
