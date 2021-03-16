@@ -393,7 +393,10 @@ function openMap() {
 }
 
 function openSchedule() {
-	var title = "Logged in Notre Dame users can see more detail.";
+	var title = `<strong>My Calendar</strong> <br> 
+				 Schedule <a href=\"https://calendly.com/ucar-dhoward/15min\" target=\"_blank\">15</a>/
+				 		<a href=\"https://calendly.com/ucar-dhoward/30min\" target=\"_blank\">30</a>/
+				 		<a href=\"https://calendly.com/ucar-dhoward/60min\" target=\"_blank\">60</a> minute meeting with me`;
 	//document.querySelector("ul:nth-child(6)").style.backgroundColor = "#F00";
 	$("#modal-title").html(title);
 	$("#modal-content").load("publicCalendar.html");
