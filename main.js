@@ -411,28 +411,29 @@ function openResearch() {
 function openResume() {
 	$("#modal-title").html("Last Updated: ");
 	var key = "AIzaSyDlUs1fHWB2A_-up3aN7Wffa8VxifUi0jM";
-	var fileId = "1hu8cshqy54vM8L_vyyWOyENE08HVCn_c";
+	var fileId = "1jCyG3B5gvrBwS5QuuSoSoe3b3Cnzq2nf";
+	https://drive.google.com/file/d/1jCyG3B5gvrBwS5QuuSoSoe3b3Cnzq2nf/view?usp=sharing
 	var url = "https://www.googleapis.com/drive/v3/files/" + fileId + 
 				"?fields=modifiedTime&key=" + key;
 	//document.querySelector("ul:nth-child(7)").style.backgroundColor = "#F00";			
 	var p = $.getJSON(url, function(data) {
 		$("#modal-title").append(data.modifiedTime.substr(0,data.modifiedTime.indexOf("T")));
 	});
-	$("#modal-content").html('<iframe src="https://docs.google.com/viewer?srcid=1hu8cshqy54vM8L_vyyWOyENE08HVCn_c&pid=explorer&efh=false&a=v&chrome=false&embedded=true" width="99%" height="90%" frameborder="0" scrolling="no"></iframe>');
+	$("#modal-content").html('<iframe src="https://docs.google.com/viewer?srcid=1jCyG3B5gvrBwS5QuuSoSoe3b3Cnzq2nf&pid=explorer&efh=false&a=v&chrome=false&embedded=true" width="99%" height="90%" frameborder="0" scrolling="no"></iframe>');
 	$("#modal").css("display","block");
 }
 
 function openCV() {
 	$("#modal-title").html("Last Updated: ");
 	var key = "AIzaSyDlUs1fHWB2A_-up3aN7Wffa8VxifUi0jM";
-	var fileId = "1IL9_CMhr7T2ozE1BJdAuxedwWZd7YnZb";
+	var fileId = "1yosRp7eUGDjm7nQV6Gd8l0jbuqLVCX-I";
 	var url = "https://www.googleapis.com/drive/v3/files/" + fileId + 
 				"?fields=modifiedTime&key=" + key;
 	//document.querySelector("ul:nth-child(7)").style.backgroundColor = "#F00";			
 	var p = $.getJSON(url, function(data) {
 		$("#modal-title").append(data.modifiedTime.substr(0,data.modifiedTime.indexOf("T")));
 	});
-	$("#modal-content").html('<iframe src="https://docs.google.com/viewer?srcid=1IL9_CMhr7T2ozE1BJdAuxedwWZd7YnZb&pid=explorer&efh=false&a=v&chrome=false&embedded=true" width="99%" height="90%" frameborder="0" scrolling="no"></iframe>');
+	$("#modal-content").html('<iframe src="https://docs.google.com/viewer?srcid=1yosRp7eUGDjm7nQV6Gd8l0jbuqLVCX-I&pid=explorer&efh=false&a=v&chrome=false&embedded=true" width="99%" height="90%" frameborder="0" scrolling="no"></iframe>');
 	$("#modal").css("display","block");
 }
 
