@@ -412,7 +412,6 @@ function openResume() {
 	$("#modal-title").html("Last Updated: ");
 	var key = "AIzaSyDlUs1fHWB2A_-up3aN7Wffa8VxifUi0jM";
 	var fileId = "1jCyG3B5gvrBwS5QuuSoSoe3b3Cnzq2nf";
-	https://drive.google.com/file/d/1jCyG3B5gvrBwS5QuuSoSoe3b3Cnzq2nf/view?usp=sharing
 	var url = "https://www.googleapis.com/drive/v3/files/" + fileId + 
 				"?fields=modifiedTime&key=" + key;
 	//document.querySelector("ul:nth-child(7)").style.backgroundColor = "#F00";			
