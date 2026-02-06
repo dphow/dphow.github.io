@@ -418,7 +418,7 @@ function openResume() {
 	var p = $.getJSON(url, function(data) {
 		$("#modal-title").append(data.modifiedTime.substr(0,data.modifiedTime.indexOf("T")));
 	});
-	$("#modal-content").html('<iframe src="https://docs.google.com/viewer?srcid=1jCyG3B5gvrBwS5QuuSoSoe3b3Cnzq2nf&pid=explorer&efh=false&a=v&chrome=false&embedded=true" width="99%" height="90%" frameborder="0" scrolling="no"></iframe>');
+	$("#modal-content").html('<iframe src="https://drive.google.com/file/d/' + fileId + '/preview" width="99%" height="90%" frameborder="0" scrolling="no"></iframe>');
 	$("#modal").css("display","block");
 }
 
@@ -432,7 +432,7 @@ function openCV() {
 	var p = $.getJSON(url, function(data) {
 		$("#modal-title").append(data.modifiedTime.substr(0,data.modifiedTime.indexOf("T")));
 	});
-	$("#modal-content").html('<iframe src="https://docs.google.com/viewer?srcid=1yosRp7eUGDjm7nQV6Gd8l0jbuqLVCX-I&pid=explorer&efh=false&a=v&chrome=false&embedded=true" width="99%" height="90%" frameborder="0" scrolling="no"></iframe>');
+	$("#modal-content").html('<iframe src="https://drive.google.com/file/d/' + fileId + '/preview" width="99%" height="90%" frameborder="0" scrolling="no"></iframe>');
 	$("#modal").css("display","block");
 }
 
