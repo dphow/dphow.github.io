@@ -109,7 +109,7 @@ function readData (gif) {
 		$("#drawCover").attr("title", picData.title);
 		$("#drawCover").css("background", "url(" + siteURL + ") no-repeat center center fixed").css("background-size", "cover").fadeTo(750, 1);
 		$("#redditboxContent").html('Images courtesy of <a title="Link to reddit Page" target="_blank"href=https://www.reddit.com' + 
-			picData.permalink + '"><img id="redditLogo"src="css/icons/redditLogo.png" height=30/></a>');
+			picData.permalink + '><img id="redditLogo"src="css/icons/redditLogo.png" height=30/></a>');
 		if (!gif) {
 		hueViaKMeans();
 		}
